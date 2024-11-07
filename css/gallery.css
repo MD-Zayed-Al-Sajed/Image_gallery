@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+
+#gallery {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+figure {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+figure img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 4px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+figure img:hover {
+    transform: scale(1.02);
+}
+
+figcaption {
+    color: #555;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px 0;
+}
+
+ul li {
+    margin: 0 8px;
+}
+
+ul img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+ul img:hover,
+ul img.active {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    border-color: #2c3e50;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal img.largeImage {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#caption {
+    color: #f4f4f4;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ddd;
+}
+
+
+.arrow-prev,
+.arrow-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    font-size: 36px;
+    padding: 20px;
+    user-select: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.arrow-prev:hover,
+.arrow-next:hover {
+    color: #ddd;
+    transform: scale(1.1);
+}
+
+.arrow-prev {
+    left: 30px;
+}
+
+.arrow-next {
+    right: 30px;
+}
+
+
+@media (max-width: 768px) {
+    figure img {
+        max-width: 90%;
+    }
+    ul img {
+        max-width: 100px;
+    }
+    .modal img.largeImage {
+        max-width: 90%;
+    }
+}
