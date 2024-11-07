@@ -27,8 +27,8 @@
 	<span class="close" onclick="closeModal()">&times;</span>
 	<img id="modalImg" class="largeImage" src="images/flowers-pink-large.jpg" alt="Featured Image">
 	<figcaption id="caption">Flowers Pink Large</figcaption>
-	<div class="arrow-prev" onclick="navigate(-1)">&#10094;</div>
-	<div class="arrow-next" onclick="navigate(1)">&#10095;</div>
+	<div class="arrow-prev" onclick="event.stopPropagation(); navigate(-1)">&#10094;</div>
+	<div class="arrow-next" onclick="event.stopPropagation(); navigate(1)">&#10095;</div>
 </div>
 
 <script src="js/gallery.js"></script>
